@@ -1,18 +1,17 @@
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'codropsicons';
-	src: url("../fonts/codropsicons/codropsicons.eot");
-	src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"), url("../fonts/codropsicons/codropsicons.woff") format("woff"), url("../fonts/codropsicons/codropsicons.ttf") format("truetype"), url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
-}
 
 @font-face {
-	font-family: 'camera-icons';
-	src: url("../fonts/camera-icons/camera-icons.eot?7h6q4p");
-	src: url("../fonts/camera-icons/camera-icons.eot?#iefix7h6q4p") format("embedded-opentype"), url("../fonts/camera-icons/camera-icons.woff?7h6q4p") format("woff"), url("../fonts/camera-icons/camera-icons.ttf?7h6q4p") format("truetype"), url("../fonts/camera-icons/camera-icons.svg?7h6q4p#camera-icons") format("svg");
+	font-family: 'Lato';
+	src: url("../fonts/Lato2/Lato-Light.ttf"); 
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Lato Bold';
+	src: url("../fonts/Lato2/Lato-Medium.ttf"); 
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 .main-nav a {
 
@@ -45,7 +44,7 @@ br
 }
 
 body {
-	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Lato', 'Helvetica Neue',  Helvetica, Arial, sans-serif;
 	color: #fff;
 	background: #252323;
 	-webkit-font-smoothing: antialiased;
@@ -53,6 +52,10 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato Bold', Helvetica, sans-serif;
 }
 
 a {
