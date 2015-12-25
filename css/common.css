@@ -28,11 +28,20 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-body, p {
-	background: #fff;
+body, p{ 
+	
 	color: #2E3444;
 	font-size: 100%;
 	line-height: 1.25;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	background: #fff;
+}
+
+p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
@@ -59,6 +68,7 @@ a:hover, a:focus {
 .content-about-us h2{
 	color: #9C00FF;
 }
+
 
 .main-nav a {
 

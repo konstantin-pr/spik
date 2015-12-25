@@ -192,9 +192,9 @@ html {
 
 body, p {
   color: #333;
-  font-size: 1rem;
+  font-size: 1.145rem;
   line-height: 1.8rem;
-  font-family: "Lato", Georgia, Times, serif;
+  font-family: Georgia, Times, serif;
   line-height: 1.45rem;
   font-weight: 400;
 }

@@ -31,7 +31,7 @@
 	width: 100%;
 	background: rgba(0,0,0,0.5);
 	color: #D3EEE2;
-	text-align: right;
+	text-align: left;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 800;
@@ -177,7 +177,7 @@
 	left: 100%;
 	top: 0;
 	height: 100%;
-	padding: 0 1em 0 0;
+	padding: 0 1em 0 0.5em;
 	display: -ms-flex;
 	display: -webkit-flex;
 	display: flex;
@@ -215,8 +215,7 @@
 
 .description--preview p {
 	font-size: 0.65em;
-	max-width: 100%;
-	color: #909090;
+	max-width: 100%;	 
 	margin: 0.4rem 0 0.8rem 0;
 }
 

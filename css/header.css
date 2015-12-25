@@ -9,6 +9,10 @@ body {
 	background: #14CC66;
 }
 
+.apartments .codrops-header {
+	padding-bottom: 2em;
+}
+
 .codrops-header h1 {
 	margin: 0;
 	font-size: 2.5em;
@@ -17,6 +21,14 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.apartments .codrops-header h1 {
+	font-size: 2.8em;
+}
+
+.tours .codrops-header h1 {
+	font-size: 2.35em;
+	letter-spacing: 1px;
+}
 
 .codrops-header h1 span {
 	display: block;
