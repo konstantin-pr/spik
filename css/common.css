@@ -44,7 +44,9 @@ p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
-
+.content p {
+	font-size: 1rem;
+}
 a {
 	color: #fff;
 	text-decoration: none;
