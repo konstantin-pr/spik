@@ -1,3 +1,6 @@
+body {
+	background: #fff;
+}
 .codrops-header {
 	margin: 0 auto;
 	padding: 2em;
@@ -23,9 +26,12 @@
 .codrops-header a {
 	color: #fff;
 }
-body {
-	background: #fff;
+
+.codrops-header a:hover {
+	text-decoration: underline;
+	color: yellow;
 }
+
 /* Demo links */
 .main-nav {
 	padding-top: 50px;
