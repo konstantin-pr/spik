@@ -192,7 +192,7 @@ html {
 
 body, p {
   color: #333;
-  font-size: 1.145rem;
+  
   line-height: 1.8rem;
   font-family: Georgia, Times, serif;
   line-height: 1.45rem;
@@ -201,6 +201,7 @@ body, p {
 
 p {
   margin-bottom: 1.3rem;
+  font-size: 1.145rem;
 }
 
 h1, h2, h3, h4 {
