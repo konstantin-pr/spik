@@ -28,7 +28,7 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-body {
+body, p {
 	background: #fff;
 	color: #2E3444;
 	font-size: 100%;
@@ -47,7 +47,18 @@ a:hover, a:focus {
 	color: yellow;
 }
 
+.content-about-us {
+	width: 80%;
+	margin: 0 auto;	 
+	font-family: 'Lato', sans-serif;
+}
 
+.about_us h1, .about_us h2 {
+	font-family: "Lato Bold", Helvetica, Arial, sans-serif;
+}
+.content-about-us h2{
+	color: #9C00FF;
+}
 
 .main-nav a {
 
@@ -92,6 +103,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lato Bold', Helvetica, sans-serif;
+
 }
 
 a {

@@ -1,6 +1,7 @@
 body {
 	background: #fff;
 }
+
 .codrops-header {
 	margin: 0 auto;
 	padding: 2em;
@@ -13,7 +14,9 @@ body {
 	font-size: 2.5em;
 	font-weight: 900;
 	color: #fff;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 
 .codrops-header h1 span {
 	display: block;
@@ -24,12 +27,24 @@ body {
 }
 
 .codrops-header a {
-	color: #fff;
+	color: #fff;	
 }
 
 .codrops-header a:hover {
 	text-decoration: underline;
 	color: yellow;
+}
+
+.about_us .codrops-header {
+	background: #9C00FF;
+}
+
+.appartments .codrops-header {
+	 
+}
+
+.tours .codrops-header {
+	background:#F7B82D;
 }
 
 /* Demo links */
@@ -38,15 +53,18 @@ body {
 }
 
 .main-nav a {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin: 15px;
 	padding: 5px 2px;
 	font-weight: 900;
+	text-decoration: none;
 }
 
 .main-nav a.current-page {
 	color: yellow;
+	text-decoration: underline;
 }
  
 section {

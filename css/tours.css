@@ -194,7 +194,7 @@ body, p {
   color: #333;
   font-size: 1rem;
   line-height: 1.8rem;
-  font-family: "Lora", Georgia, Times, serif;
+  font-family: "Lato", Georgia, Times, serif;
   line-height: 1.45rem;
   font-weight: 400;
 }
@@ -237,7 +237,7 @@ small, .font_small {
 }
 
 a, strong, .button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
