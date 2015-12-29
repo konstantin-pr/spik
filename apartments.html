@@ -16,17 +16,35 @@
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/appartments.css" />
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" />
 	<script src="js/modernizr-custom.js"></script>
 </head>
 
 <body class="apartments demo-2">
-<header class="codrops-header">
+<header class="codrops-header clearfix">
 				<h1>Аппартаменты Изола, Порторож</h1>	
 				<nav class="main-nav">
 					<a href="index.html">О нас</a>
 					<a class="current-page" href="#">Аппартаменты</a>
 					<a href="tours.html">Экскурсии</a>
 				</nav>
+				<div class="contact-us-button morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+						<button type="button">Задайте нам вопрос!</button> 
+						<div class="morph-content">
+							<div>
+								<div class="content-style-form content-style-form-1">
+									<span class="icon icon-close">Закрыть</span> <br>
+									<h2>Оставьте заявку и мы вам перезвоним!</h2>
+									<form>
+									<p><label>Ваше имя</label><input type="text" /></p>
+										<p><label>Ваш телефон</label><input type="text" pattern="2-[0-9]{3}-[0-9]{3}"/></p>
+										
+										<p><button>ОK</button></p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!-- morph-button -->
 			</header>
 	<div class="container"> 
 		<div class="content">
@@ -360,6 +378,8 @@
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/classie.js"></script>
+	<script src="js/uiMorphingButton_fixed.js"></script>
+	<script src="js/uiMorphingButton_inflow.js"></script>
 	<script src="js/main.js"></script>
 	<script>
 		(function() {
