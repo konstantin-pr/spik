@@ -726,7 +726,7 @@
 	padding: 1.5em;
 	width: 100%;
 	border: none;
-	background: orange;
+	background: #1DB4F7;
 	color: #f9f6e5;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -734,8 +734,13 @@
 	font-size: 1.25em;
 }
 
+.content-style-form button:hover {
+	 
+	background: #3D95B3;
+}
+
 .content-style-form .icon-close {
-	top: 0;
+	top: -1.8rem;
 	right: 0;
 	color: #1DB4F7;
 	font-size: 75%;
@@ -1064,7 +1069,10 @@
 .morph-button-modal-2.contact-us-button > button {
 	color: #FFAF00;
 	background: white;
-	border: 2px solid white;
+	border: 2px solid #0AC25C;
+	-webkit-box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
+	-moz-box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
+	box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
 }
 .morph-button-modal-2.contact-us-button:hover > button {
 	color: orange;
