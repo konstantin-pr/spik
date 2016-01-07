@@ -12,14 +12,14 @@ function actionSendMail(){
         "required1"=>"Пожалуйста, укажите ",
         "required2"=>" ",
         "valid_email"=>"Пожалуйста укажите email (формат: name@domain.com)",
-        "valid_phone"=>"Будь-ласка укажите телефон в формате (формат +380990504455)",
-        "success"=>'Ваш запрос успешно обработан. Мы вам перезвоним! ',
+        "valid_phone"=>"Пожалуйста укажите телефон в формате (формат +380990504455)",
+        "success"=>'Message is successfully sent',
     );
 
     //sleep(5000);
     $responseArr = array();
     $validationErrors = array();
-    var_dump('request', $_REQUEST);
+    //var_dump('request', $_REQUEST);
       $validated = validateFields($validationErrors,$errorMsg);
      //$validated = true;
   
@@ -42,23 +42,17 @@ function actionSendMail(){
         $mail = new  PHPMailer(true);
 //        $mail->SMTPDebug = 2;
         $mail->IsSMTP();
-        $mail->Host = "localhost";
-//        $mail->Host = "smtp.gmail.com";
-               // $mail->Port = Yii::app()->params->smtp_port;
-//               $mail->Port = Yii::app()->params->smtp_port;
-                // $mail->SMTPSecure = "tls";//"ssl";
-//        $mail->SMTPAuth = true;
-//        $mail->Username = $auth_email;
+        $mail->Host = "localhost";  
         $mail->CharSet = 'UTF-8';
-//        $mail->Password = 'k.,jdm456';
+ 
         $mail->AddReplyTo($reply_to_email, 'Reply to '.$name);
 
-        $mail->Subject = 'Заявка от  \''.$name.'\'  ('.$phone.')';
-        $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-        $mail->MsgHTML('<p></p><br/><br/> Вопрос клиента (опционально) <p><span style="color:#ccc">: </span>'.$message.'</p>');
+        $mail->Subject = 'Сайт аппартаменты: Заявка от клиента: \''.$name.'\'  ('.$phone.')';
+        $mail->AltBody = 'Use email viewer!';
+        $mail->MsgHTML('<p></p><br/><br/> Вопрос клиента (опционально) <p><span style="color:#000">: </span>'.$message.'</p> <br> <br> <p><span style="color:#1DB4F7">: </span>'.$phone.'</p> ');
         $mail->SetFrom($auth_email, $name);
 
-        $emails =  array('kean.dev@gmail.com');     //parkovaoselya@ukr.net
+        $emails =  array('kean.dev@gmail.com', 'keyseemann@gmail.com');
         //adding addresses
         foreach ($emails as $send_email)  {
             $mail->AddAddress($send_email, '');
@@ -83,13 +77,13 @@ function actionSendMail(){
         }
         //$res = true;
         $send = false;
-        var_dump('send',$send);
+       
         try {
             $mail->Send();
             $send = true;
         }
         catch(Exception $ex){
-            $responseArr['msg'] = $errorMsg['send_error'].$ex->getMessage();
+            $responseArr['msg'] = $errorMsg['send_error'].$ex->getMessage(); 
             $responseArr['status'] = 'error';
         }
         if ($send){
@@ -101,34 +95,8 @@ function actionSendMail(){
         $responseArr['status']='validation_error';
         $responseArr['validation_errors'] = $validationErrors;
     }
-    if (isset($_REQUEST['ajax_request']) && $_REQUEST['ajax_request'] == true){
-        echo json_encode($responseArr);
-    } else { //redirect 
-        //var_dump($responseArr);
-        if ($responseArr['status'] == 'validation_error') {
-            foreach ($responseArr['validation_errors'] as $key=>$err ){
-               echo '<p>Ошибка ввода: <span style="color:#f46150">'.$err.'</span></p>';
-            }
-        } else{
-
-           echo '<p style="color:green">'.$responseArr['msg'].'</p>';
-        }
-        ?>
-            <script>
-
-                function second_passed() {
-
-                    window.location='/appartments.html';
-
-                }
-
-                setTimeout(second_passed, 1500) ;
-
-
-            </script>
-        <?php
-    }
-
+    echo json_encode($responseArr);
+     
 
 }
 

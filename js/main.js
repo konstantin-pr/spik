@@ -402,8 +402,16 @@ $.fn.serializeObject = function()
 				function submitFormData() {  
 				        $.post( "s/srequest.php",  $('.user-question').serializeObject(),
 				        function( data ) {
-						  alert( data );
-						  console.log(data);
+				        	if (data.status == 'success'){
+				        		alert( 'Ваш запрос успешно обработан. Мы вам перезвоним!' );
+				        	} 
+							// else if (data.status == 'validation_error') {
+							//  	console.log('err', data.validation_errors);
+							//  	$.each(data.validation_errors, function( key, value ) {
+							// 		  console.log( key + ": " + value );
+							// 	}); 
+						 // }
+						console.log(data);
 						});
 				        return false; 
 				};
