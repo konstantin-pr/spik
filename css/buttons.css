@@ -681,6 +681,11 @@
 	font-size: 3.5em;
 }
 
+.content-style-form .content-style-form-1 h2.title-success {
+	display: none;
+	color: orange !important;
+}
+
 .content-style-form form {
 	padding: 10px 30px;
 }
@@ -1095,8 +1100,12 @@
 }
 
 .morph-button.open .content-style-form-1 h2 {
-	color: yellowgreen !important;
+	color: yellowgreen;
 	font-size: 2.5rem;
 	font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.morph-button.open .content-style-form-1 h2.title-success {
+	color: orange; 
 }
 

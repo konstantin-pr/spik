@@ -402,6 +402,8 @@ $.fn.serializeObject = function()
 				function submitFormData() {  
 				        $.post( "s/srequest.php",  $('.user-question').serializeObject(),
 				        function( data ) {
+				        	$('.title').hide();
+				        	$('.title-success').show();
 				        	if (data.status == 'success'){
 				        		alert( 'Ваш запрос успешно обработан. Мы вам перезвоним!' );
 				        	} 
@@ -424,6 +426,8 @@ $.fn.serializeObject = function()
 						onBeforeOpen : function() {
 							// don't allow to scroll
 							noScroll();
+							$('.title').show();
+				    		$('.title-success').hide(); 
 						},
 						onAfterOpen : function() {
 							// can scroll again
@@ -438,10 +442,12 @@ $.fn.serializeObject = function()
 							canScroll();
 						}
 					} );
+					
 				} );
 
 				// for demo purposes only
 				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
-					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); submitFormData(); } );
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); 
+				    submitFormData(); } );
 				} );
 			})();
