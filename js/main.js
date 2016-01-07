@@ -1,14 +1,22 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2015, Codrops
- * http://www.codrops.com
- */
-;(function(window) {
+ 
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+(function(window) {
 
 	'use strict';
 
@@ -391,6 +399,11 @@
 					didScroll = false;
 				};
 
+				function submitFormData() { 
+				        $('#question').text(JSON.stringify($('.user-question').serializeObject()));
+				        return false; 
+				};
+
 				scrollFn();
 
 				[].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
@@ -417,6 +430,6 @@
 
 				// for demo purposes only
 				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
-					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); submitFormData(); } );
 				} );
 			})();
