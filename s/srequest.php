@@ -34,7 +34,8 @@ function actionSendMail(){
         $_REQUEST['message_set'] = true;
         $auth_email = 'keyseemann@gmail.com'; //email that pass auth
 
-        $phone = $_REQUEST["phone"];
+        //$phone = $_REQUEST["phone"];
+        $email = $_REQUEST["email"];
         $message = $_REQUEST["question"];
 	//var_dump($_REQUEST);
 	//sleep(5);
@@ -47,9 +48,9 @@ function actionSendMail(){
  
         $mail->AddReplyTo($reply_to_email, 'Reply to '.$name);
 
-        $mail->Subject = 'Заявка от клиента: \''.$name.'\'  ('.$phone.')';
+        $mail->Subject = 'Заявка от клиента: \''.$name.'\'  ('.$email.')';
         $mail->AltBody = 'Use email viewer!';
-        $mail->MsgHTML('<p></p><br/><br/> <span style="color:#eee">Вопрос клиента (опционально):</span> <p>'.$message.' </span></p> <br> <br> <p>Телефон клиента: <span style="color:#1DB4F7">'.$phone.'</span></p> ');
+        $mail->MsgHTML('<p></p><br/><br/> <span style="color:#eee">Вопрос клиента (опционально):</span> <p>'.$message.' </span></p> <br> <br> <p>E-mail клиента: <span style="color:#1DB4F7">'.$email.'</span></p> ');
         $mail->SetFrom($auth_email, $name);
 
         $emails =  array('site.spik@mail.ru', 'k.pryanichnikov@mail.ru');
@@ -109,15 +110,15 @@ function validateFields(&$validationErrors,$errMsg){
         $validationErrors['name']= $errMsg['required1']." ім'я".$errMsg['required2'];
         //var_dump($validationErrors);
     }
-//    if (!isset($_REQUEST["email"]) || strlen(trim($_REQUEST["email"])===0)  || strtolower(trim($_REQUEST["email"]))  == 'e-mail'  ){
-//        $validated = false;
-//        // echo "email now: ".$_REQUEST["email"];
-//        $validationErrors['email']= $errMsg['required1']."E-mail".$errMsg['required2'];
-//    }
-    if (!isset($_REQUEST["phone"]) || strlen(trim($_REQUEST["phone"])) === 0  ){
-        $validated = false;
-        $validationErrors['phone']= $errMsg['required1']."телефон".$errMsg['required2']; 
-    }
+   if (!isset($_REQUEST["email"]) || strlen(trim($_REQUEST["email"])===0)  || strtolower(trim($_REQUEST["email"]))  == 'e-mail'  ){
+       $validated = false;
+       // echo "email now: ".$_REQUEST["email"];
+       $validationErrors['email']= $errMsg['required1']."E-mail".$errMsg['required2'];
+   }
+    // if (!isset($_REQUEST["phone"]) || strlen(trim($_REQUEST["phone"])) === 0  ){
+    //     $validated = false;
+    //     $validationErrors['phone']= $errMsg['required1']."телефон".$errMsg['required2']; 
+    // }
 
     if (isset($_REQUEST['message_set']) && $_REQUEST['message_set'] == true) {
 
@@ -131,14 +132,14 @@ function validateFields(&$validationErrors,$errMsg){
     if (count($validationErrors)===0) //if no errors, continue validation
     {
 
-//        $validated = filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL);
-//        if (!$validated){
-//            $validationErrors['email'] = $errMsg['valid_email'];
-//        }
-        if ($validated){
-            $validated = preg_match("/^([0-9\(\)\/\+ \-]{7,21})$/",$_REQUEST["phone"])   ;
-            $validationErrors['phone'] = $errMsg['valid_phone'];
-        }
+       $validated = filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL);
+       if (!$validated){
+           $validationErrors['email'] = $errMsg['valid_email'];
+       }
+        // if ($validated){
+        //     $validated = preg_match("/^([0-9\(\)\/\+ \-]{7,21})$/",$_REQUEST["phone"])   ;
+        //     $validationErrors['phone'] = $errMsg['valid_phone'];
+        // }
 
     }
 
