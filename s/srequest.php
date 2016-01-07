@@ -47,7 +47,7 @@ function actionSendMail(){
  
         $mail->AddReplyTo($reply_to_email, 'Reply to '.$name);
 
-        $mail->Subject = 'Сайт аппартаменты: Заявка от клиента: \''.$name.'\'  ('.$phone.')';
+        $mail->Subject = 'Заявка от клиента: \''.$name.'\'  ('.$phone.')';
         $mail->AltBody = 'Use email viewer!';
         $mail->MsgHTML('<p></p><br/><br/> <span style="color:#eee">Вопрос клиента (опционально):</span> <p>'.$message.' </span></p> <br> <br> <p>Телефон клиента: <span style="color:#1DB4F7">'.$phone.'</span></p> ');
         $mail->SetFrom($auth_email, $name);

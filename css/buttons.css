@@ -1109,3 +1109,8 @@
 	color: orange; 
 }
 
+.morph-button.open .content-style-form-1 h2.title-error {
+	color: red; 
+	display: none;
+}
+ 

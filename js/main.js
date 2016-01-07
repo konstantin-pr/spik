@@ -402,17 +402,23 @@ $.fn.serializeObject = function()
 				function submitFormData() {  
 				        $.post( "s/srequest.php",  $('.user-question').serializeObject(),
 				        function( data ) {
-				        	$('.title').hide();
-				        	$('.title-success').show();
+				        	data = jQuery.parseJSON(data);
+				        	console.log(data.status);
 				        	if (data.status == 'success'){
-				        		alert( 'Ваш запрос успешно обработан. Мы вам перезвоним!' );
+				        		$('.title').hide();
+				        		$('.title-success').show();
+				        		$('.title-error').hide();
 				        	} 
-							// else if (data.status == 'validation_error') {
-							//  	console.log('err', data.validation_errors);
-							//  	$.each(data.validation_errors, function( key, value ) {
-							// 		  console.log( key + ": " + value );
-							// 	}); 
-						 // }
+						 	if (data.status == 'validation_error') { 
+						 		$('.title-error').show();
+						 		$('.title').hide();
+				        		$('.title-success').hide();
+
+							  	console.log('err', data.validation_errors);
+							   	$.each(data.validation_errors, function( key, value ) {
+							  		  console.log( key + ": " + value );
+							  	}); 
+						   }
 						console.log(data);
 						});
 				        return false; 
@@ -427,7 +433,8 @@ $.fn.serializeObject = function()
 							// don't allow to scroll
 							noScroll();
 							$('.title').show();
-				    		$('.title-success').hide(); 
+				    		$('.title-success').hide();
+				    		$('.title-error').hide(); 
 						},
 						onAfterOpen : function() {
 							// can scroll again
