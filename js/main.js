@@ -399,8 +399,12 @@ $.fn.serializeObject = function()
 					didScroll = false;
 				};
 
-				function submitFormData() { 
-				        $('#question').text(JSON.stringify($('.user-question').serializeObject()));
+				function submitFormData() {  
+				        $.post( "s/srequest.php",  $('.user-question').serializeObject(),
+				        function( data ) {
+						  alert( data );
+						  console.log(data);
+						});
 				        return false; 
 				};
 
