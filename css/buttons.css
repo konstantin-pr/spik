@@ -221,9 +221,9 @@
 }
 
 .morph-button-modal-2.open .morph-content {
-	margin: -210px 0 0 -170px;
+	margin: -280px 0 0 -170px;
 	width: 340px;
-	height: 420px;
+	height: 530px;
 }
 
 .morph-button-modal-3.open .morph-content {
@@ -700,7 +700,9 @@
 }
 
 .content-style-form input[type="text"],
-.content-style-form input[type="password"] {
+.content-style-form input[type="password"],
+.content-style-form textarea
+ {
 	padding: 10px;
 	width: 100%;
 	border: 2px solid yellowgreen;
@@ -711,12 +713,24 @@
 }
 
 .content-style-form input[type="text"]:focus,
-.content-style-form input[type="password"]:focus {
+.content-style-form input[type="password"]:focus
+{
 	border-color: #1DB4F7;
 	color: #1DB4F7;
 }
 
-.content-style-form input:focus {
+.content-style-form textarea {
+	color: #1DB4F7;
+}
+
+.content-style-form textarea:focus {
+	border-color: #1DB4F7;
+	color: #2E3444;
+}
+
+
+.content-style-form input:focus, 
+.content-style-form textarea:focus {
 	outline: 0;
 }
 
