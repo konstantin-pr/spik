@@ -1081,8 +1081,8 @@
 
 .morph-button.morph-button-modal-2.contact-us-button {
 	display: inline-block;
-	float: right;
-	margin-bottom: 0px;
+/*	float: right;*/
+	margin: 2rem 0 0;
 }
 
 .morph-button-modal-2.contact-us-button > button {
@@ -1092,6 +1092,8 @@
 	-webkit-box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
 	-moz-box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
 	box-shadow: 10px 12px 13px -6px rgba(5,115,52,1);
+	font-size: 120%;
+    font-family: 'Lato';
 }
 .morph-button-modal-2.contact-us-button:hover > button {
 	color: orange;
@@ -1113,4 +1115,49 @@
 	color: red; 
 	display: none;
 }
+
+
+/*Contact us section area*/
+.contact-us {
+	text-align: left; 
+	margin-top: 2rem;
+}
+
+@media (max-width: 980px){
+ 	.contact-us {
+		text-align: center; 
+	}
+}
+
+.clients_phone {
+/*	position: absolute;
+	left: 2rem;
+	top: 8rem;*/
+
+}
  
+.clients-phone, .clients-phone i {
+	color: #fff;
+	font-size: 3rem; 
+}
+
+.clients-phone i { 
+ 	font-size: 3.5rem; 
+ 	margin-right: 2rem;
+ 	vertical-align: top;
+}
+
+.clients-phone .row {
+	margin: 1rem 0;
+	font-family: "Lato", sans-serif;
+}
+
+.clients-phone .mobile_phone i { 
+ 	font-size: 4rem; 
+ 	margin-right: 2.4rem;
+ 	margin-left: 0.5rem;
+}
+
+.contact-us .contact-us-button {
+/*	margin-top: 2rem;*/
+}
