@@ -146,7 +146,7 @@ section {
 
  
 
-/*footer*/
+/*footer styles*/
 
 .footer {
 	background: #444444;
@@ -154,13 +154,16 @@ section {
 	font-size: 2rem;
 	display: block;
 	padding: 3rem;
+	font-family: 'Lato', sans-serif;
+}
+.tours .footer {
+	padding: 1.5rem;
+}
+.tours .footer, .tours .footer nav a {
+	font-size: 1.1rem;
 }
 
-@media (max-width: 960px) {
-	.footer {
-		font-size: 2.5rem;
-	}
-}
+
 
 .footer nav {
 	margin-top: 5.5rem;
@@ -170,6 +173,7 @@ section {
 	color: #fff;
 	margin: 2rem;
 	padding: 1rem 0;
+	display: inline-block;
 }
 
 .footer nav a:hover, .footer nav a:active, .footer nav a.active {
@@ -198,4 +202,34 @@ section {
 
 .footer-contacts .viber .fa {
 	margin-left: 2rem;
+}
+
+@media (max-width: 960px) {
+	.footer {
+		font-size: 2.5rem;
+	}
+	.footer nav a {
+		font-size: 1.8rem;
+		padding: 0.5rem 0;
+		margin: 0 1.5rem;
+	}
+	.tours .footer, .tours .footer nav a {
+		font-size: 1.4rem;
+	}
+
+	.footer-contacts {
+		margin-top: 3.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		padding: 1.5rem 3rem;
+	}
+
+	.footer nav a {
+		font-size: 2rem;
+		padding: 1rem 0;
+		margin: 0 1.5rem;
+	}
 }
