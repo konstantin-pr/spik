@@ -11,6 +11,7 @@ body {
 
 .apartments .codrops-header {
 	padding-bottom: 2em;
+	background: #03A65A;
 }
 
 .codrops-header h1 {
@@ -23,6 +24,8 @@ body {
 
 .apartments .codrops-header h1 {
 	font-size: 2.8em;
+	color: #ffad2b;
+    font-family: 'Lato', sans-serif;
 }
 
 .tours .codrops-header h1 {
@@ -59,6 +62,14 @@ body {
 	background:#F7B82D;
 }
 
+.codrops-header .fa {
+	color: #ffad2b;
+}
+
+.codrops-header .fa-mobile{ 
+    position: relative;
+    top: -0.5rem; 
+}
 /* Demo links */
 .main-nav {
 	padding-top: 50px;
@@ -135,3 +146,56 @@ section {
 
  
 
+/*footer*/
+
+.footer {
+	background: #444444;
+	color: #fff;
+	font-size: 2rem;
+	display: block;
+	padding: 3rem;
+}
+
+@media (max-width: 960px) {
+	.footer {
+		font-size: 2.5rem;
+	}
+}
+
+.footer nav {
+	margin-top: 5.5rem;
+}
+
+.footer nav  a {
+	color: #fff;
+	margin: 2rem;
+	padding: 1rem 0;
+}
+
+.footer nav a:hover, .footer nav a:active, .footer nav a.active {
+	color: rgb(255, 175, 0);;
+ 	border-bottom: 1px solid yellowgreen; 
+ 	text-decoration: none;
+}
+
+.footer-contacts .row {
+	margin: 1.5rem;
+}
+ 
+.footer-contacts h3 {
+	color: #FFAF00;
+	margin-left: 1.5rem;
+}
+
+.footer-contacts .row span {
+	font-weight: bold;
+}
+
+.footer-contacts .fa {
+	margin: 0 1rem;
+	color: yellowgreen;
+}
+
+.footer-contacts .viber .fa {
+	margin-left: 2rem;
+}
